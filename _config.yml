@@ -106,3 +106,14 @@ deploy:
   repo: https://github.com/Flightsquadyeah/flightsquadyeah.github.io.git
   branch: main
   message: "Site deployed: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+
+math:
+  engine: 'mathjax' # 或者 'katex'
+  mathjax:
+    src: https://polyfill.io/v3/polyfill.min.js?features=es6
+    config:
+      tex:
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      svg:
+        fontCache: 'global'
